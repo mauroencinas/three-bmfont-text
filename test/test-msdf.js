@@ -72,7 +72,8 @@ function start (font, texture) {
     var material = new THREE.RawShaderMaterial(MSDFShader({
       map: texture,
       transparent: true,
-      color: palette[Math.floor(Math.random() * palette.length)]
+      color: palette[Math.floor(Math.random() * palette.length)],
+      isWebGL2: false
     }))
 
     var layout = geom.layout
